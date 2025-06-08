@@ -10,6 +10,7 @@ function exibirTextoNaTela(tag, texto) {
 }
 
 exibirMensagemInicial()
+console.log("teste");
 
 function verificarChute() {
     let chute = document.querySelector('input').value;
