@@ -10,7 +10,6 @@ function exibirTextoNaTela(tag, texto) {
 }
 
 exibirMensagemInicial()
-console.log("teste");
 
 function verificarChute() {
     let chute = document.querySelector('input').value;
@@ -35,7 +34,7 @@ function verificarChute() {
 }
 
 function exibirMensagemInicial() {
-    exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
+    exibirTextoNaTela('p', `Escolha um número entre 1 e ${numeroMaximo}`);
     exibirTextoNaTela('h1', 'Jogo do número secreto');
 }
 
@@ -53,10 +52,10 @@ function limparCampo() {
 }
 
 function gerarNumeroAleatorio() {
-    let numeroEscolhido = parseInt(Math.random() * 10 + 1);
+    let numeroEscolhido = parseInt(Math.random() * numeroMaximo + 1);
     let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
 
-    if (quantidadeDeElementosNaLista == 10) {
+    if (quantidadeDeElementosNaLista == numeroMaximo) {
         listaDeNumerosSorteados = [];
     }
 
